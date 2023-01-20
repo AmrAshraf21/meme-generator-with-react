@@ -1,38 +1,228 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family:Arial, Helvetica, sans-serif ;
+  
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p{
+  font-size: 30px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-header{
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+padding: 20px 35px;
+background-color:#672280 ;
+color: white;
+}
+.left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.left img{
+  width: 50px;
+  margin-right: 18px;
+}
+.container-header .right{
+  font-size: 19px;
+}
+.container-meme{
+  width: 80%;
+  margin:40px auto ;
   display: flex;
   flex-direction: column;
+  justify-content:center;
+align-items: center;
+gap: 20px;
+}
+.input{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input input{
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 45%;
+  
+}
+.input input:focus{
+  outline: none;
+}
+.container-meme .btn{
+  width: 100%;
+  padding: 18px 28px;
+  border: none;
+  border-radius: 10px;
+  background-color:#672280 ;
+color: white;
+font-size: 25px;
+text-align: center;
+font-style: italic;
+cursor: pointer;
+}
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.state--value {
+  margin:auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgb(159, 36, 36);
+  color: white;
+  text-align: center;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  cursor: pointer;
+
+}
+
+.counter{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgb(119, 6, 6);
   color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.minus,.plus{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color:#aaa;
+  color: white;
+  text-align: center;
+  display: flex;
+  font-size: 30px;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.minus{
+  left: 43%;
+  top: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.plus{
+  right: 43%;
+  top: 50%;
+}
+.meme-image{
+  max-width: 100%;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  height: 350px;
+  box-shadow: 5px 5px 5px 1px rgba(120,120,120,0.44);
+  -webkit-box-shadow: 5px 5px 5px 1px rgba(120,120,120,0.44);
+  -moz-box-shadow: 5px 5px 5px 1px rgba(120,120,120,0.44);
+}
+
+.card--image {
+  width: 100%;
+  padding: 10%;
+  padding-bottom: 0;
+}
+
+.card--name {
+  margin-block: 13px;
+  color: #333333;
+}
+
+.card--info {
+  padding: 10px;
+}
+
+.card--favorite {
+  width: 25px;
+  cursor: pointer;
+}
+
+.card--contact {
+  font-size: 0.75rem;
+  color: gray;
+  margin-block: 7px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #262626;
+  color: #D9D9D9;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter {
+  display: flex;
+  align-items: flex-end;
+}
+
+.counter > button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: #737373;
+  color: #D9D9D9;
+  font-size: 1.5rem;
+}
+
+.counter > button:hover {
+  background-color: #404040;
+  color: #D9D9D9;
+}
+
+.counter > button:focus {
+  outline: none;
+}
+
+.counter--count {
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #262626;
+}
+
+.counter--plus {
+  margin-left: -20px;
+}
+
+.counter--minus {
+  margin-right: -20px;
+  z-index: 1;
 }
